@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivi du Bilan Carbone des collectivités</title>
+<meta name="description" content="Choisissez une collectivité : son bilan d'émissions de gaz à effet de serre poste par poste, sa place parmi les collectivités semblables, et un tableau de suivi de son plan de transition avec un indicateur par action.">
+<meta name="author" content="Césarion Djonel">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314213d'/%3E%3Cpath d='M7 22l6-7 5 4 7-10' fill='none' stroke='%236da7ec' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="bandeau-titre">
+    <h1>Suivi du Bilan Carbone des collectivités</h1>
+    <p>Où sont les émissions, comment la collectivité se situe parmi ses semblables, et comment suivre son plan de transition action par action : pour toute commune, intercommunalité, département ou région ayant publié son bilan.</p>
+  </div>
+  <form class="recherche" id="recherche" autocomplete="off" role="search">
+    <label for="champ">Collectivité</label>
+    <div class="recherche-champ">
+      <input id="champ" type="search" placeholder="Nom, par exemple Clichy" aria-controls="propositions" aria-autocomplete="list">
+      <ul id="propositions" class="propositions" role="listbox" hidden></ul>
+    </div>
+  </form>
+</header>
+
+<main class="colonne">
+  <section class="accueil large" id="accueil">
+    <h2>Choisissez une collectivité</h2>
+    <p>Les collectivités de plus de 50 000 habitants doivent publier un bilan de leurs émissions de gaz à effet de serre et un plan de transition sur la plateforme de l'ADEME. L'outil reprend ces bilans publics, les rend comparables et transforme le plan de transition en tableau de suivi, avec un indicateur proposé pour chaque action.</p>
+    <p id="compte" class="note"></p>
+    <p class="exemples">Exemples :
+      <a href="#219200243">Clichy</a>
+      <a href="#219400173">Champigny-sur-Marne</a>
+      <a href="#211003744">Troyes</a>
+      <a href="#212603625">Valence</a>
+      <a href="#217605401">Rouen</a>
+    </p>
+  </section>
+
+  <article class="fiche" id="fiche" hidden>
+    <div id="fiche-contenu"></div>
+  </article>
+</main>
+
+<footer class="pied">
+  <p><b>Conception et réalisation : Césarion Djonel</b>, 2026 · <a href="https://github.com/projetperso-spec/suivi-bilan-carbone">méthode et code source</a></p>
+  <p>Sources : ADEME, Centre de ressources Bilans GES, bilans publiés par les collectivités (Licence Ouverte 2.0) ; Citepa pour le ministère chargé de l'environnement, inventaire de gaz à effet de serre territorialisé, année 2016 ; API Découpage administratif (population des communes).</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
